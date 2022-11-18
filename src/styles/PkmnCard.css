@@ -1,0 +1,65 @@
+.normal{
+    background-color: antiquewhite;
+}
+.fighting{
+    background-color: rgb(197, 93, 93);
+}
+.flying{
+    background-color: aqua;
+}
+.poison{
+    background-color: rgb(170, 108, 227);
+}
+.ground{
+    background-color: rgba(204, 100, 100, 0.6);
+}
+.rock{
+    background-color: gray;
+}
+.bug{
+    background-color: yellow;
+}
+.ghost{
+    background-color: rgb(128, 68, 183);
+}
+.steel{
+    background-color: rgb(157, 142, 142);
+}
+.fire{
+    background-color: orange;
+}
+.water{
+    background-color: rgb(77, 77, 245);
+}
+.grass{
+    background-color: greenyellow;
+}
+.electric{
+    background-color: orange;
+}
+.psychic{
+    background-color: pink;
+}
+.ice{
+    background-color: lightblue;
+}
+.dragon{
+    background-color: lightsalmon;
+}
+.dark{
+    background-color: azure;
+}
+.fairy{
+    background-color: lightpink;
+}
+
+.buscarCard{
+    text-align: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    text-align: center;
+  }
