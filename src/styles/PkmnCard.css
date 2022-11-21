@@ -1,65 +1,202 @@
 .normal{
-    background-color: antiquewhite;
+    background-color: rgb(196, 191, 182);
+    border-style: solid;
+    border-color: black;
 }
+
 .fighting{
-    background-color: rgb(197, 93, 93);
+    background-color: rgb(126, 49, 30);
+    border-style: solid;
+    border-color: black;
 }
 .flying{
-    background-color: aqua;
+    background-color: rgb(152, 169, 244);
+    border-style: solid;
+    border-color: black;
 }
 .poison{
-    background-color: rgb(170, 108, 227);
+    background-color: rgb(149, 81, 151);
+    border-style: solid;
+    border-color: black;
 }
 .ground{
-    background-color: rgba(204, 100, 100, 0.6);
+    background-color: rgb(208, 177, 84);
+    border-style: solid;
+    border-color: black;
 }
 .rock{
-    background-color: gray;
+    background-color: rgb(185, 161, 84);
+    border-style: solid;
+    border-color: black;
 }
 .bug{
-    background-color: yellow;
+    background-color: rgb(138, 151, 15);
+    border-style: solid;
+    border-color: black;
 }
 .ghost{
-    background-color: rgb(128, 68, 183);
+    background-color: rgb(96, 98, 172);
+    border-style: solid;
+    border-color: black;
 }
 .steel{
-    background-color: rgb(157, 142, 142);
+    background-color: rgb(144, 142, 159);
+    border-style: solid;
+    border-color: black;
 }
 .fire{
-    background-color: orange;
+    background-color: rgb(227, 57, 9);
+    border-style: solid;
+    border-color: black;
 }
 .water{
-    background-color: rgb(77, 77, 245);
+    background-color: rgb(56, 150, 247);
+    border-style: solid;
+    border-color: black;
 }
 .grass{
-    background-color: greenyellow;
+    background-color: rgb(122, 198, 60);
+    border-style: solid;
+    border-color: black;
 }
 .electric{
-    background-color: orange;
+    background-color: rgb(247, 178, 17);
+    border-style: solid;
+    border-color: black;
 }
 .psychic{
-    background-color: pink;
+    background-color: rgb(212, 69, 118);
+    border-style: solid;
+    border-color: black;
 }
 .ice{
-    background-color: lightblue;
+    background-color: rgb(107, 211, 245);
+    border-style: solid;
+    border-color: black;
 }
 .dragon{
-    background-color: lightsalmon;
+    background-color: rgb(112, 91, 206);
+    border-style: solid;
+    border-color: black;
 }
 .dark{
-    background-color: azure;
+    background-color: rgb(83, 60, 46);
+    border-style: solid;
+    border-color: black;
 }
 .fairy{
-    background-color: lightpink;
+    background-color: rgb(230, 158, 229);
+    border-style: solid;
+    border-color: black;
 }
+
+
+/*After***************************/
+.normal::after{
+    content: 'normal';
+}
+
+.fighting::after{
+    content: 'lucha';
+}
+.flying::after{
+    content: 'volador';
+}
+.poison::after{
+    content: 'veneno';
+}
+.ground::after{
+   content: 'tierra';
+}
+.rock::after{
+    content: 'roca';
+}
+.bug::after{
+    content: 'bicho';
+}
+.ghost::after{
+    content: 'fantasma';
+}
+.steel::after{
+    content: 'acero';
+}
+.fire::after{
+    content: 'fuego';
+}
+.water::after{
+    content: 'agua';
+}
+.grass::after{
+    content: 'hierba';
+}
+.electric::after{
+    content: 'eléctrico';
+}
+.psychic::after{
+    content: 'psíquico';
+}
+.ice::after{
+    content: 'hielo';
+}
+.dragon::after{
+    content: 'dragón';
+}
+.dark::after{
+    content: 'oscuro';
+}
+.fairy::after{
+    content: 'hada';
+}
+/*After*******************************/
+
 
 .buscarCard{
     text-align: center;
 }
 
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
+
+
+.card {
+    height: 350px;
+    width: 250px;
+    box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.2);
+}
+
+
+
+.types{
+    display:inline-flex;
+    gap: 10px;
     text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 15px;
+    
+}
+
+.types > div {
+    border-radius: 13%;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-transform: uppercase;
+    font-family: 'Forgotten Futurist Rg', sans-serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    color: white;
+    font-size: 1.5em ;                                         
+}
+
+.card-header{
+    text-transform: uppercase;
+    font-family: 'Forgotten Futurist Rg', sans-serif;
+    font-size: 1em ;   
+}
+
+
+/**********/
+/*Para targeta de buscar un solo pokemon*/
+
+  #card-search{
+    width: 500px;
+    height: 150px;
   }

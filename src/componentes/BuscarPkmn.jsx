@@ -11,9 +11,10 @@ export default class Form extends Component {
             name: "",
             sprite: "#",
             typeA: "",
-            typeB: ""
+            typeB: "",
+            show: 0,
         }
-
+        
     }
     
 
@@ -27,22 +28,25 @@ export default class Form extends Component {
           this.setState({
             id: data.id,
             name: data.name,
-            img: data.sprites.front_default,
+            img: data.sprites.other['official-artwork'].front_default,
             typeA: data.types[0].type.name,
-            typeB: data.types[1].type.name
+            typeB: data.types[1].type.name,
+            show: 1
           })
         } catch (error) {
           this.setState({
             id: data.id,
             name: data.name,
-            img: data.sprites.front_default,
-            typeA: data.types[0].type.name
+            img: data.sprites.other['official-artwork'].front_default,
+            typeA: data.types[0].type.name,
+            show: 1
           })
         }       
         
        
     }
 
+    
     handlerName = event => { 
        this.setState({
         name: event.target.value
@@ -52,16 +56,25 @@ export default class Form extends Component {
     handlerSubmit = event => {
         event.preventDefault();
         this.fetchApi();
+
     }
 
+    release = () => {
+      this.setState({
+        name: '',
+        show:0
+      });
+      //console.log(this.state.show)
+    }
 
   render() {
    // console.log(this.state.name)
+
+   if(this.state.show===0){
     return (
-      <body class='m-0 justify-content-center'>
-        <div className='col-auto p-5 text-center'>
-        <div className='wrapper'>
-        <div className="card" >
+      <div className='d-inline-block py-5'>
+      
+        <div id='card-search' className="card" >
           <div className="card-header text-black">
             Buscar Pokemon...
           </div>
@@ -80,21 +93,30 @@ export default class Form extends Component {
           </div>
          
         </div>
-        
-        
-        <div className='card bg-ligth'>
+      </div> 
+    )
+   }else{
+    return (
+      <div>
+          <div className='py-2 d-flex justify-content-center' >
+           <div className='card bg-light'>
                 <div className='card-header text-white bg-dark'>id:{this.state.id} - {this.state.name}</div>
-                <div className='card-body'>
-                  <img src={this.state.img} alt="" />
-                  <span><p className={this.state.typeA} >{this.state.typeA}</p><p className={this.state.typeB}>{this.state.typeB}</p></span>
+                <div>
+                  <div className='card-body'>
+                  <img src={this.state.img} alt="Imagen no disponible" width='150px' height='150px' />
+                  </div>
+                 
+                  <div className='types'><div className={this.state.typeA} ></div><div className={this.state.typeB}></div></div>
                 </div>
-        </div>
-  
-        
+            </div>
       </div>
-        </div>
-      </body>
+      <form onSubmit={this.release}>
+                    <button type='submit' className="btn btn-primary mt-2">Volver</button>
+                </form>
+      </div>
       
     )
+   }
+    
   }
 }

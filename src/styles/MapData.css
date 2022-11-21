@@ -1,5 +1,49 @@
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 10px;
+  @media(min-width: 0px){
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 10px;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  }
+
+  @media(min-width: 384px){
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  }
+
+  @media(min-width: 768px){
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  }
+
+  @media(min-width: 1152px){
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  }
+
+  @media(min-width: 1536px){
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 10px;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
   }
