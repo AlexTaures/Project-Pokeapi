@@ -7,7 +7,7 @@ export default function SetPkmnList() {
     let lista = []
 
     const getData = async () => {
-        await axios.get('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
+        await axios.get('https://pokeapi.co/api/v2/pokemon?limit=150&offset=0')
         .then(async(response) => {
           setEnd(response.data.results.length);
           
