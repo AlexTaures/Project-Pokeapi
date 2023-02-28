@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/pkmn-project/static/css/main.e894209b.css",
-    "main.js": "/pkmn-project/static/js/main.06471f9f.js",
+    "main.js": "/pkmn-project/static/js/main.b13de845.js",
     "static/media/pokeballanimated.gif": "/pkmn-project/static/media/pokeballanimated.18262ee6914906c3bdd4.gif",
     "index.html": "/pkmn-project/index.html",
     "main.e894209b.css.map": "/pkmn-project/static/css/main.e894209b.css.map",
-    "main.06471f9f.js.map": "/pkmn-project/static/js/main.06471f9f.js.map"
+    "main.b13de845.js.map": "/pkmn-project/static/js/main.b13de845.js.map"
   },
   "entrypoints": [
     "static/css/main.e894209b.css",
-    "static/js/main.06471f9f.js"
+    "static/js/main.b13de845.js"
   ]
 }
