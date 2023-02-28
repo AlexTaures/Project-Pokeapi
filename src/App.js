@@ -2,7 +2,7 @@ import './App.css';
 import {DataProvider} from './context/DataContext'
 import MapData from './componentes/MapData';
 import NavBar from './componentes/NavBar';
-import { BrowserRouter as Router, Route, Routes, NavLink} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes, NavLink, Navigate} from 'react-router-dom'
 import BuscarPkmn from './componentes/BuscarPkmn'
 import SetPkmnList from './componentes/SetPkmnList';
 
@@ -33,6 +33,8 @@ function App() {
           <Route exact path="/" element={
             <BuscarPkmn />
           }/>
+
+        <Route path="*" element={<Navigate to="/" replace={true} />}/>
           
         </Routes>
     </Router>
